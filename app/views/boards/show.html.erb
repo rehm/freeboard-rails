@@ -1,13 +1,18 @@
 
-<%= render :partial => 'board' %>
+<%= render :partial => 'board', locals: {editmode:  false}%>
+
+
 
 
 <script type="text/javascript">
+
 	
-	head.ready(document, function() {
-    freeboard.newDashboard()
-                        freeboard.initialize(false);
-
-
-	});
+	// head.ready(document, function() {
+	// 	var config = <%= @board.config %>
+	// 	console.log(head.tex)
+	// 	if(config){
+	// 	   freeboard.loadDashboard($.parseJSON(<%= @board.config %>));
+	// 	}
+ //        freeboard.setEditing(false);
+	// });
 </script>

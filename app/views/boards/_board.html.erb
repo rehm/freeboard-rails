@@ -1,4 +1,15 @@
+<script type="text/javascript">
+
+    EDITMODE = <%= editmode %> ;
+
+    DKD_CONFIG = "<%= @board.config %>"
+
+</script>
+
 <div id="board-content">
+    <textarea cols="20" rows="0" id="dkd_board_config" name="post[body]" style="display:none;">
+<%= @board.config %>
+    </textarea>
     <img id="dash-logo" data-bind="attr:{src: header_image}, visible:header_image()">
     <div class="gridster">
         <ul data-bind="grid: true">

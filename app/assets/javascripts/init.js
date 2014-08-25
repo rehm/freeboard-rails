@@ -14,13 +14,22 @@
                 function(){
                     $(function()
                     { //DOM Ready
-                        freeboard.initialize(true);
+                        freeboard.initialize(EDITMODE);
+                        var board_config = "";
+                            console.log(EDITMODE)
 
-
-                        var board_config = $.parseJSON($('#board_config').val());
+                        if(EDITMODE)
+                        {
+                            board_config = $.parseJSON($('#board_config').val());
+                        }
+                        else 
+                        {
+                            board_config = $.parseJSON($('#dkd_board_config').val());
+                            board_config['allow_edit'] = false;
+                        }
                         // Load Board Config if exist
                         if(board_config){
-                        	freeboard.loadDashboard(board_config); 
+                        	freeboard.loadDashboard(board_config);
                     	}
                     });
                 });

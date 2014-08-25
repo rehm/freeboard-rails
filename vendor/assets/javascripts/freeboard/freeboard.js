@@ -1741,6 +1741,7 @@ var freeboard = (function()
 			}
 
 			var animateLength = (animate) ? 250 : 0;
+			console.log(animateLength);
 			var barHeight = $("#admin-bar").outerHeight();
 
 			if(!editing)
