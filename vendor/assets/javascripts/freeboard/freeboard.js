@@ -1260,10 +1260,10 @@ var freeboard = (function()
 			// Initialize our grid
 			grid = $(element).gridster({
 				widget_margins        : [10, 10],
-				widget_base_dimensions: [300, 10]
+				widget_base_dimensions: [400, 10]
 			}).data("gridster");
 
-            $(".gridster").css("width", grid.cols * 300 + (grid.cols * 20));
+            $(".gridster").css("width", grid.cols * 400 + (grid.cols * 20));
 
 			grid.disable();
 		}
